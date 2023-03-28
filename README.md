@@ -3,8 +3,6 @@ Implementation of the incomplete beta function.
 
 This uses formula 8.17.24 from the Digital Library of Mathematical Functions (https://dlmf.nist.gov/8.17). This involves a sum of non-integer "n-choose-k" binomial coefficients. Usage is: teg_incomplete_beta(x, a, b).
 
-Initial tests using this as part of calculating p-values for F-tests gave the same results as SciPy up to at least three decimals.
-
 ```
 import numpy as np
 import math
