@@ -14,5 +14,8 @@ def teg_incomplete_beta_comb_series(x, a, b):
     return Ix
 
 def teg_incomplete_beta(x, a, b):
-    Ix = teg_incomplete_beta_comb_series(x, a, b)
+    if x > a/(a + b):
+        Ix = 1 - teg_incomplete_beta_comb_series(1-x, b, a)
+    else:
+        Ix = teg_incomplete_beta_comb_series(x, a, b)
     return Ix
